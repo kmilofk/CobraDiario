@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a1a7f",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#121220",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark overflow-x-hidden">
+<!-- Header Section -->
+<div class="flex items-center bg-white dark:bg-slate-900 p-4 pb-2 justify-between sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800">
+<div class="text-primary flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center">Mis Préstamos</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-lg h-12 bg-transparent text-primary">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+</div>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-3 p-4 overflow-x-auto no-scrollbar">
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white px-5">
+<p class="text-sm font-semibold">Todos</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-5 text-slate-600 dark:text-slate-400">
+<p class="text-sm font-medium">Activos</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-5 text-slate-600 dark:text-slate-400">
+<p class="text-sm font-medium">Vencidos</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-5 text-slate-600 dark:text-slate-400">
+<p class="text-sm font-medium">Pendientes</p>
+</div>
+</div>
+<!-- Loans List -->
+<div class="flex flex-col gap-4 p-4 pb-24">
+<!-- Loan Card 1: Active/On Time -->
+<div class="flex flex-col bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+<div class="p-4 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div>
+<span class="inline-flex items-center rounded-md bg-green-50 dark:bg-green-900/20 px-2 py-1 text-xs font-medium text-green-700 dark:text-green-400 ring-1 ring-inset ring-green-600/20">
+                                Al día
+                            </span>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold mt-2">Préstamo #LN-8492</h3>
+</div>
+<div class="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">payments</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-slate-500 dark:text-slate-400 text-sm">Cliente: <span class="text-slate-900 dark:text-slate-200 font-medium">Carlos Rodríguez</span></p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Monto Total: <span class="text-slate-900 dark:text-slate-200 font-medium">$2,500.00</span></p>
+</div>
+<div class="mt-2">
+<div class="flex justify-between mb-1.5">
+<span class="text-xs font-medium text-slate-600 dark:text-slate-400">Progreso de pago</span>
+<span class="text-xs font-bold text-primary">65%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 65%"></div>
+</div>
+<p class="text-[10px] text-slate-400 mt-1">$1,625 de $2,500 pagados</p>
+</div>
+<div class="flex gap-2 mt-2">
+<button class="flex-1 h-10 rounded-lg bg-primary text-white text-sm font-semibold hover:bg-primary/90">
+                            Ver Detalles
+                        </button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-xl">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Loan Card 2: Delayed -->
+<div class="flex flex-col bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+<div class="p-4 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div>
+<span class="inline-flex items-center rounded-md bg-red-50 dark:bg-red-900/20 px-2 py-1 text-xs font-medium text-red-700 dark:text-red-400 ring-1 ring-inset ring-red-600/20">
+                                Atrasado
+                            </span>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold mt-2">Préstamo #LN-7210</h3>
+</div>
+<div class="h-12 w-12 rounded-lg bg-red-100 dark:bg-red-900/20 flex items-center justify-center text-red-600">
+<span class="material-symbols-outlined">warning</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-slate-500 dark:text-slate-400 text-sm">Cliente: <span class="text-slate-900 dark:text-slate-200 font-medium">Elena Martínez</span></p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Monto Total: <span class="text-slate-900 dark:text-slate-200 font-medium">$1,200.00</span></p>
+</div>
+<div class="mt-2">
+<div class="flex justify-between mb-1.5">
+<span class="text-xs font-medium text-slate-600 dark:text-slate-400">Progreso de pago</span>
+<span class="text-xs font-bold text-red-600">30%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2">
+<div class="bg-red-500 h-2 rounded-full" style="width: 30%"></div>
+</div>
+<p class="text-[10px] text-slate-400 mt-1">$360 de $1,200 pagados</p>
+</div>
+<div class="flex gap-2 mt-2">
+<button class="flex-1 h-10 rounded-lg bg-primary text-white text-sm font-semibold">
+                            Ver Detalles
+                        </button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-xl">notifications_active</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Loan Card 3: Pending/New -->
+<div class="flex flex-col bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+<div class="p-4 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div>
+<span class="inline-flex items-center rounded-md bg-blue-50 dark:bg-blue-900/20 px-2 py-1 text-xs font-medium text-blue-700 dark:text-blue-400 ring-1 ring-inset ring-blue-600/20">
+                                Pendiente
+                            </span>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold mt-2">Préstamo #LN-9055</h3>
+</div>
+<div class="h-12 w-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600">
+<span class="material-symbols-outlined">pending_actions</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-slate-500 dark:text-slate-400 text-sm">Cliente: <span class="text-slate-900 dark:text-slate-200 font-medium">Ricardo Sosa</span></p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Monto Total: <span class="text-slate-900 dark:text-slate-200 font-medium">$5,000.00</span></p>
+</div>
+<div class="mt-2">
+<div class="flex justify-between mb-1.5">
+<span class="text-xs font-medium text-slate-600 dark:text-slate-400">Progreso de pago</span>
+<span class="text-xs font-bold text-slate-400">0%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2">
+<div class="bg-slate-300 dark:bg-slate-600 h-2 rounded-full" style="width: 0%"></div>
+</div>
+<p class="text-[10px] text-slate-400 mt-1">Aprobado, esperando desembolso</p>
+</div>
+<div class="flex gap-2 mt-2">
+<button class="flex-1 h-10 rounded-lg bg-primary text-white text-sm font-semibold">
+                            Gestionar
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pb-4 pt-2 flex items-center justify-around z-20">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<p class="text-[10px] font-medium leading-normal">Inicio</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1">description</span>
+<p class="text-[10px] font-bold leading-normal">Préstamos</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">group</span>
+<p class="text-[10px] font-medium leading-normal">Clientes</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">account_circle</span>
+<p class="text-[10px] font-medium leading-normal">Perfil</p>
+</a>
+</div>
+</div>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

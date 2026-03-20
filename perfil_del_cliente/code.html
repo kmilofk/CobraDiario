@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a1a7f",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#121220",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Perfil del Cliente</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<!-- Top Header -->
+<div class="flex items-center bg-white dark:bg-slate-900 p-4 pb-2 justify-between sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Perfil del Cliente</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 w-10 bg-transparent text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Profile Hero Section -->
+<div class="flex p-6 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800">
+<div class="flex w-full flex-col gap-4 items-center">
+<div class="flex gap-4 flex-col items-center">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-24 w-24 border-4 border-primary/10" data-alt="Professional headshot of a male client" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBUF3BIahdPg8dpp-JLHzYy7QJIrlYmHJQ21NXVex-aliznS2B_PDtuuRwcywpJIjrb-dma4DRWZA45cmH1qHW7zU2nio3D3eh50PR-BQFGqR6EemC2BaGlm1TZylBqiUkdK89xQUHkpFGX8-OIStOCqsNie-01YZADiE9h3WXQmT6-eiEjRVMoFMcSKU39m1usTupR-lu9QYFJrPl2h1Ktpd2wfcUSIVTtgsINTeCk22vEjA1575SEQj9fLQPqxtDAtoeS4oJL9u0");'>
+</div>
+<div class="absolute bottom-1 right-1 bg-green-500 h-4 w-4 rounded-full border-2 border-white dark:border-slate-900"></div>
+</div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight tracking-tight text-center">Juan Pérez González</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">Estado: Activo</span>
+<span class="text-slate-500 dark:text-slate-400 text-sm font-medium">ID: #98274</span>
+</div>
+</div>
+</div>
+<div class="flex w-full gap-3 mt-2">
+<button class="flex-1 bg-primary text-white font-bold py-2.5 rounded-xl text-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">add</span> Nuevo Préstamo
+                    </button>
+<button class="flex-1 border border-primary text-primary font-bold py-2.5 rounded-xl text-sm flex items-center justify-center gap-2 bg-white dark:bg-slate-900">
+<span class="material-symbols-outlined text-sm">mail</span> Mensaje
+                    </button>
+</div>
+</div>
+</div>
+<!-- Tabs Navigation -->
+<div class="sticky top-[61px] z-10 bg-white dark:bg-slate-900">
+<div class="flex border-b border-slate-200 dark:border-slate-800 px-4 overflow-x-auto no-scrollbar">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-primary pb-3 pt-4 flex-none px-4" href="#">
+<p class="text-sm font-bold leading-normal whitespace-nowrap">Información</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-slate-500 dark:text-slate-400 pb-3 pt-4 flex-none px-4" href="#">
+<p class="text-sm font-bold leading-normal whitespace-nowrap">Historial</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-slate-500 dark:text-slate-400 pb-3 pt-4 flex-none px-4" href="#">
+<p class="text-sm font-bold leading-normal whitespace-nowrap">Pagos</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-slate-500 dark:text-slate-400 pb-3 pt-4 flex-none px-4" href="#">
+<p class="text-sm font-bold leading-normal whitespace-nowrap">Documentos</p>
+</a>
+</div>
+</div>
+<!-- Content Area -->
+<div class="flex flex-col gap-6 p-4 pb-24">
+<!-- Personal Info Section -->
+<section>
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Información Personal</h3>
+<button class="text-primary text-sm font-semibold">Editar</button>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800 space-y-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-slate-400">phone</span>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider">Teléfono</p>
+<p class="text-slate-900 dark:text-slate-100 font-medium">+52 555 123 4567</p>
+</div>
+</div>
+<div class="flex items-start gap-3 border-t border-slate-50 dark:border-slate-800 pt-3">
+<span class="material-symbols-outlined text-slate-400">email</span>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider">Email</p>
+<p class="text-slate-900 dark:text-slate-100 font-medium">juan.perez@example.com</p>
+</div>
+</div>
+<div class="flex items-start gap-3 border-t border-slate-50 dark:border-slate-800 pt-3">
+<span class="material-symbols-outlined text-slate-400">location_on</span>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider">Dirección</p>
+<p class="text-slate-900 dark:text-slate-100 font-medium">Av. Insurgentes Sur 1234, Ciudad de México</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Loan History Section -->
+<section>
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Historial de Préstamos</h3>
+<button class="text-primary text-sm font-semibold">Ver todo</button>
+</div>
+<div class="space-y-3">
+<!-- Active Loan Card -->
+<div class="bg-white dark:bg-slate-900 rounded-xl p-4 shadow-sm border-l-4 border-l-primary border border-slate-100 dark:border-slate-800">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider">Préstamo Personal</p>
+<p class="text-xl font-bold text-slate-900 dark:text-slate-100">$25,000.00</p>
+</div>
+<span class="bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 text-[10px] font-bold px-2 py-1 rounded uppercase">En curso</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mt-4">
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Fecha de inicio</p>
+<p class="text-sm font-semibold text-slate-900 dark:text-slate-100">12 Oct 2023</p>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Próximo pago</p>
+<p class="text-sm font-semibold text-primary">12 Nov 2023</p>
+</div>
+</div>
+</div>
+<!-- Completed Loan Card -->
+<div class="bg-white dark:bg-slate-900 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider">Microcrédito</p>
+<p class="text-xl font-bold text-slate-900 dark:text-slate-100">$5,000.00</p>
+</div>
+<span class="bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 text-[10px] font-bold px-2 py-1 rounded uppercase">Pagado</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mt-4">
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Fecha de inicio</p>
+<p class="text-sm font-semibold text-slate-900 dark:text-slate-100">05 Jun 2023</p>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Finalizado en</p>
+<p class="text-sm font-semibold text-slate-900 dark:text-slate-100">05 Sep 2023</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Payments -->
+<section>
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Últimos Pagos</h3>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex items-center justify-between p-4 border-b border-slate-50 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-green-100 dark:bg-green-900/20 flex items-center justify-center text-green-600">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Mensualidad #3</p>
+<p class="text-xs text-slate-500">12 Oct 2023</p>
+</div>
+</div>
+<p class="font-bold text-slate-900 dark:text-slate-100">$2,450.00</p>
+</div>
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-green-100 dark:bg-green-900/20 flex items-center justify-center text-green-600">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Mensualidad #2</p>
+<p class="text-xs text-slate-500">12 Sep 2023</p>
+</div>
+</div>
+<p class="font-bold text-slate-900 dark:text-slate-100">$2,450.00</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-4 pb-6 pt-2 flex justify-between items-center z-50">
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-bold uppercase tracking-tighter">Inicio</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">group</span>
+<p class="text-[10px] font-bold uppercase tracking-tighter">Clientes</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<p class="text-[10px] font-bold uppercase tracking-tighter">Préstamos</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-[10px] font-bold uppercase tracking-tighter">Ajustes</p>
+</a>
+</div>
+</div>
+</body></html>
